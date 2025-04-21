@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Development Services - CZT</title>
+  <link rel="stylesheet" href="software-development.css" />
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.header {
+  background-color: #20232a;
+  color: #61dafb;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+#lang-select {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-width: 350px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: scale(1.03);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card h2 {
+  padding: 15px 20px 5px;
+  color: #20232a;
+}
+
+.service-card p {
+  padding: 0 20px 20px;
+}
+
+footer {
+  background-color: #20232a;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1 data-translate="title">Software Development Services</h1>
+    <select id="lang-select">
+      <option value="en">English</option>
+      <option value="ki">Kinyarwanda</option>
+      <option value="fr">French</option>
+    </select>
+  </header>
+
+  <section class="services-container">
+    <div class="service-card">
+      <img src="dev1.jpg" alt="Website Creation">
+      <h2 data-translate="website-creation">Website Creation</h2>
+      <p data-translate="website-creation-desc">We provide full-stack website creation services to bring your ideas to life on the web. From planning to launch, we ensure that your website is tailored to meet your business goals.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="dev3.jpg" alt="Website Development">
+      <h2 data-translate="website-development">Website Development</h2>
+      <p data-translate="website-development-desc">Our developers use the latest technologies to build dynamic, responsive websites that offer excellent performance and user experience across all devices.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="web1 (1).jpg" alt="Website Design">
+      <h2 data-translate="website-design">Website Design</h2>
+      <p data-translate="website-design-desc">We create beautiful, intuitive, and responsive designs that not only look great but also provide a seamless experience for your visitors, ensuring high user engagement.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="dev5.jpg" alt="Mobile App Development">
+      <h2 data-translate="mobile-app-development">Mobile App Development</h2>
+      <p data-translate="mobile-app-development-desc">We develop powerful mobile apps for iOS and Android that offer smooth functionality, intuitive user interfaces, and seamless integration with your services.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="ussd.jpg" alt="USSD Application Development">
+      <h2 data-translate="ussd-application">USSD Application Development</h2>
+      <p data-translate="ussd-application-desc">We build USSD applications to help businesses communicate with their customers in real-time, even without internet access. Perfect for mobile networks and banking services.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CZT - Computer Zone Technology</p>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Software Development Services",
+        "website-creation": "Website Creation",
+        "website-creation-desc": "We provide full-stack website creation services to bring your ideas to life on the web. From planning to launch, we ensure that your website is tailored to meet your business goals.",
+        "website-development": "Website Development",
+        "website-development-desc": "Our developers use the latest technologies to build dynamic, responsive websites that offer excellent performance and user experience across all devices.",
+        "website-design": "Website Design",
+        "website-design-desc": "We create beautiful, intuitive, and responsive designs that not only look great but also provide a seamless experience for your visitors, ensuring high user engagement.",
+        "mobile-app-development": "Mobile App Development",
+        "mobile-app-development-desc": "We develop powerful mobile apps for iOS and Android that offer smooth functionality, intuitive user interfaces, and seamless integration with your services.",
+        "ussd-application": "USSD Application Development",
+        "ussd-application-desc": "We build USSD applications to help businesses communicate with their customers in real-time, even without internet access. Perfect for mobile networks and banking services."
+      },
+      es: {
+        title: "Servicios de Desarrollo de Software",
+        "website-creation": "Creación de Sitios Web",
+        "website-creation-desc": "Proporcionamos servicios completos de creación de sitios web para llevar sus ideas a la web. Desde la planificación hasta el lanzamiento, nos aseguramos de que su sitio web esté adaptado a sus objetivos comerciales.",
+        "website-development": "Desarrollo de Sitios Web",
+        "website-development-desc": "Nuestros desarrolladores utilizan las últimas tecnologías para construir sitios web dinámicos y receptivos que ofrecen un excelente rendimiento y experiencia de usuario en todos los dispositivos.",
+        "website-design": "Diseño de Sitios Web",
+        "website-design-desc": "Creamos diseños hermosos, intuitivos y receptivos que no solo se ven geniales, sino que también brindan una experiencia fluida para sus visitantes, asegurando una alta participación del usuario.",
+        "mobile-app-development": "Desarrollo de Aplicaciones Móviles",
+        "mobile-app-development-desc": "Desarrollamos poderosas aplicaciones móviles para iOS y Android que ofrecen un funcionamiento fluido, interfaces de usuario intuitivas e integración perfecta con sus servicios.",
+        "ussd-application": "Desarrollo de Aplicaciones USSD",
+        "ussd-application-desc": "Creamos aplicaciones USSD para ayudar a las empresas a comunicarse con sus clientes en tiempo real, incluso sin acceso a Internet. Perfecto para redes móviles y servicios bancarios."
+      }
+    };
+
+    const langSelect = document.getElementById("lang-select");
+
+    langSelect.addEventListener("change", () => {
+      const lang = langSelect.value;
+      document.querySelectorAll("[data-translate]").forEach(el => {
+        const key = el.getAttribute("data-translate");
+        el.textContent = translations[lang][key];
+      });
+    });
+  </script>
+</body>
+</html>

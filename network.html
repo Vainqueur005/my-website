@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Networking Services - CZT</title>
+  <link rel="stylesheet" href="networking.css" />
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.header {
+  background-color: #20232a;
+  color: #61dafb;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+#lang-select {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-width: 350px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: scale(1.03);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card h2 {
+  padding: 15px 20px 5px;
+  color: #20232a;
+}
+
+.service-card p {
+  padding: 0 20px 20px;
+}
+
+footer {
+  background-color: #20232a;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1 data-translate="title">Networking Services</h1>
+    <select id="lang-select">
+      <option value="en">English</option>
+      <option value="ki">Kinyarwanda</option>
+      <option value="fr">French</option>
+    </select>
+  </header>
+
+  <section class="services-container">
+    <div class="service-card">
+      <img src="net6.jpg" alt="Network Installation">
+      <h2 data-translate="install-title">Network Installation</h2>
+      <p data-translate="install-desc">We provide structured and wireless network installations for homes, businesses, and data centers with precision and reliability.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="net10.jpg" alt="Network Configuration">
+      <h2 data-translate="config-title">Network Configuration</h2>
+      <p data-translate="config-desc">From routers to switches, we configure network devices for secure, efficient, and high-performance networking.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="net7.jpg" alt="Network Repair">
+      <h2 data-translate="repair-title">Network Repair</h2>
+      <p data-translate="repair-desc">We troubleshoot and fix network issues quickly to restore full connectivity and productivity.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="net2.jpg" alt="CCTV Installation">
+      <h2 data-translate="cctv-title">CCTV Camera Installation</h2>
+      <p data-translate="cctv-desc">Enhance your security with professional CCTV camera setup and surveillance system integration.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="net11.jpg" alt="Server Configuration">
+      <h2 data-translate="server-title">Server Configuration</h2>
+      <p data-translate="server-desc">We install and configure powerful, secure servers tailored for your business or organization.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CZT - Computer Zone Technology</p>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Networking Services",
+        "install-title": "Network Installation",
+        "install-desc": "We provide structured and wireless network installations for homes, businesses, and data centers with precision and reliability.",
+        "config-title": "Network Configuration",
+        "config-desc": "From routers to switches, we configure network devices for secure, efficient, and high-performance networking.",
+        "repair-title": "Network Repair",
+        "repair-desc": "We troubleshoot and fix network issues quickly to restore full connectivity and productivity.",
+        "cctv-title": "CCTV Camera Installation",
+        "cctv-desc": "Enhance your security with professional CCTV camera setup and surveillance system integration.",
+        "server-title": "Server Configuration",
+        "server-desc": "We install and configure powerful, secure servers tailored for your business or organization."
+      },
+      es: {
+        title: "Servicios de Redes",
+        "install-title": "Instalación de Red",
+        "install-desc": "Ofrecemos instalaciones de red estructuradas e inalámbricas para hogares, empresas y centros de datos con precisión y confiabilidad.",
+        "config-title": "Configuración de Red",
+        "config-desc": "Desde enrutadores hasta switches, configuramos dispositivos de red para un rendimiento seguro y eficiente.",
+        "repair-title": "Reparación de Red",
+        "repair-desc": "Solucionamos y reparamos problemas de red rápidamente para restaurar la conectividad y productividad.",
+        "cctv-title": "Instalación de Cámaras CCTV",
+        "cctv-desc": "Mejore su seguridad con instalación profesional de cámaras CCTV e integración de sistemas de vigilancia.",
+        "server-title": "Configuración de Servidores",
+        "server-desc": "Instalamos y configuramos servidores potentes y seguros adaptados a su negocio u organización."
+      }
+    };
+
+    const langSelect = document.getElementById("lang-select");
+
+    langSelect.addEventListener("change", () => {
+      const lang = langSelect.value;
+      document.querySelectorAll("[data-translate]").forEach(el => {
+        const key = el.getAttribute("data-translate");
+        el.textContent = translations[lang][key];
+      });
+    });
+  </script>
+</body>
+</html>
